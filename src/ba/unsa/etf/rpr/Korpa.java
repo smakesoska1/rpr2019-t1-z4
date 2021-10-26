@@ -11,7 +11,21 @@ public class Korpa {
     }
 
     public Artikl izbaciArtiklSaKodom(String kod) {
-    }
+            Artikl a=null;
+            for(int i=0;i<velicina;i++){
+                if(kod==""+korpa[i].getKod()){
+                    a=korpa[i];
+                    for(int j=i+1;j<velicina;j++){
+                        korpa[j-1]=korpa[j];
+                    }
+                    //obnavljanje velciine
+                    korpa[velicina-1]=null;
+                    velicina--;
+                    i--;
+                }
+            }
+            return a;
+        }
 
     public boolean dodajArtikl(Artikl a) {
         if(velicina<50){
