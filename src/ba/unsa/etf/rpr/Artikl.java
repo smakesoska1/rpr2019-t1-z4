@@ -20,6 +20,9 @@ public class Artikl {
     public void setNaziv(String naziv) {
         this.naziv = naziv;
     }
+    public void setCijena(int cijena) {
+        this.cijena = cijena;
+    }
 
 
     public String getKod() {
